@@ -1,0 +1,60 @@
+\begin{frame}{Antes de Começar}
+Estrutura de arquivos nesse projeto:
+\begin{block}{Estrutura de Arquivos}
+    \begin{itemize}
+        \item beamerthemesrc \hspace{2pt} \% A pasta de temas.
+        \item images \hspace{2pt} \% Coloque suas imagens aqui.
+        \item header.tex \hspace{2pt} \% Coloque seus pacotes e comandos aqui.
+        \item main.tex \hspace{2pt} \% Compile esse arquivo main.tex
+        \item contents \hspace{2pt} \% Conteúdos dentro de main.tex
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Começando}
+\framesubtitle{Selecionando o tema SINTEF}
+Para começar trabalhando com \texttt{sintefbeamer}, comece um documento \LaTeX\ com o preâmbulo:
+\begin{block}{SINTEF mínimo de um Documento Beamer}
+\verb|\documentclass{beamer}|\\
+\verb|\input{header.tex}|\\
+\verb|\begin{document}|\\
+\verb|\begin{frame}{Hello, world!}|\\
+\verb|\end{frame}|\\
+\verb|\end{document}|\\
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Título da Página}
+Para definir uma página de título típica, você chama alguns comandos no preâmbulo:
+\begin{block}{Comandos para a página de título}
+\begin{verbatim}
+\title{Título de Exemplo}
+\subtitle{Subtítulo de Exemplo}
+\author{Primeiro Autor, Segundo Autor}
+\date{\today} % Também pode ser usado para nome da conferência &c.
+\end{verbatim}
+\end{block}
+Você pode então escrever a página de título com \verb|\maketitle|.
+
+Para definir uma \textbf{imagem de fundo} use o comando \verb|\titlebackground| antes de \verb|\maketitle|; seu único argumento é o nome (ou caminho) de um arquivo gráfico.
+
+Se você usar a \textbf{versão com estrela} \verb|\titlebackground*|,  a imagem será cortada em uma exibição dividida no lado direito do slide do título.
+\end{frame}
+
+\begin{frame}[fragile]{Escrevendo um slide simples}
+\framesubtitle{ É muito fácil!}
+\begin{itemize}[<+->]
+\item Um slide típico tem listas com marcadores
+\item Estes podem ser descobertos em sequência
+\end{itemize}
+\begin{block}{Código para uma página com uma lista detalhada}<+->
+\begin{verbatim}
+\begin{frame}{Writing a Simple Slide}
+  \framesubtitle{It's really easy!}
+  \begin{itemize}[<+->]
+    \item A typical slide has bulleted lists
+    \item These can be uncovered in sequence
+  \end{itemize}\end{frame}
+\end{verbatim}
+\end{block}
+\end{frame}
